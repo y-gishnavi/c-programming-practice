@@ -1,0 +1,55 @@
+
+#include <stdio.h>
+
+int main() {
+
+    float marks1, marks2, marks3;
+    float total, average;
+
+    printf("===== STUDENT GRADE CALCULATOR =====\n");
+
+    printf("Enter marks for Subject 1: ");
+    scanf("%f", &marks1);
+
+    printf("Enter marks for Subject 2: ");
+    scanf("%f", &marks2);
+
+    printf("Enter marks for Subject 3: ");
+    scanf("%f", &marks3);
+
+    if (marks1 < 0 || marks1 > 100 ||
+        marks2 < 0 || marks2 > 100 ||
+        marks3 < 0 || marks3 > 100) {
+
+        printf("Invalid marks! Enter marks between 0 and 100.\n");
+
+    } else {
+
+        total = marks1 + marks2 + marks3;
+        average = total / 3;
+
+        printf("\nTotal Marks: %.2f", total);
+        printf("\nAverage: %.2f%%", average);
+
+        if (average >= 90) {
+            printf("\nGrade: A+");
+        }
+        else if (average >= 80) {
+            printf("\nGrade: A");
+        }
+        else if (average >= 70) {
+            printf("\nGrade: B");
+        }
+        else if (average >= 60) {
+            printf("\nGrade: C");
+        }
+        else if (average >= 50) {
+            printf("\nGrade: D");
+        }
+        else {
+            printf("\nGrade: F");
+        }
+    }
+
+    return 0;
+}
